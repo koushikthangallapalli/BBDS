@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Home page</title>
+<div id="image1" style="position:absolute;top:0px;"><img src="images/image1.jpg" alt="line image" width="1007" height="140"></div>
+<div id="image2" style="position:absolute; left:40px; top:0px; width:222px; height:155px;"><img src="images/image2.jpg"border=0 width=222 height=155></div>
+<div id="image3" style="position:absolute; left:184px; top:10px; width:74px; height:84px;"><img src="images/image3.jpg"border=0 width=74 height=84></div>
+
+<div id="Title text" style="position:absolute; left:284px; top:6px; width:294px; height:84px;"><font color="black" face="Times New Roman" SIZE="6"><u><b>Online Blood Donor Database System</b></u></font></div>
+<div id="image4" style="position:absolute; left:894px; top:8px; width:125px; height:152px;"><img src="images/image4.gif"border=0 width=155 height=152></div>
+<div id="image5" style="position:absolute; left:794px; top:3px; width:130px; height:27px;"><a href="donation.htm"><img src="images/image5.gif"border=0 width=130 height=27></a></div>
+
+<script language="javascript">
+var arr = new Array();
+arr[0] = new Array("           -select-                 ");
+arr[1] = new Array("ADILABAD","CHITTOOR","KARIMNAGAR","hYDERABAD","KHAMMAM","VIJAYAWADA","VIZAG","WARANGAL");
+arr[2] = new Array("COIMBATHURE","ERODE","KANCHIPURAM","SRIRANGAM","TANJAVUR","TIRUCHIRAPALLI");
+arr[3] = new Array("ALLAPUZHA","KANNUR","KOLLAM","KOZHIKODE","MALLAPURAM","THIRUVANANTHAPURAM");
+arr[4] = new Array("MARGAO","PANAJI");
+arr[5] = new Array("AMRELI","GANDHI NAGAR","JUNAGADH","RAJKOT","SURENDRA NAGAR");
+arr[6] = new Array("DELHI");
+arr[7] = new Array("BATHINDA","CHANDIGARH","FARIDKOD");
+arr[8] = new Array("AGRA","ALLAHABAD","KANPUR","LUCKNOW");
+
+function change(combo1)
+{
+var comboValue = combo1.value;
+document.forms["form"].elements["combo2"].options.length=0;
+for (var i=0;i<arr[comboValue].length;i++)
+{
+var option = document.createElement("option");
+option.setAttribute('value',i+1);
+option.innerHTML = arr[comboValue][i];
+document.forms["form"].elements["combo2"].appendChild(option);
+}
+}
+</script>
+
+</head>
+<body>
+<form  method="post" action="donor_login.jsp">
+<div id="login id" style="position:absolute; overflow:hidden; left:414px; top:105px; width:274px; height:84px;"><font face="Times New Roman" size="3">UserName:</font><input type="text" name="username"></div>
+<div id="password" style="position:absolute; overflow:hidden; left:655px; top:105px; width:274px; height:84px;"><font face="Times New Roman" size="3"> Password:</font><input type="password" name="password"></div>
+<div id="button" style="position:absolute; overflow:hidden; left:865px; top:105px; width:174px; height:84px;"><input type="submit" value="Login"></div>
+</form>
+<div id="non member" style="position:absolute; left:800px; top:85px; width:130px; height:10px;"><a href="donor_registration.html">Not Registered</a></div>
+<div id="Home" style="position:absolute; overflow:hidden; left:38px; top:200px; width:130px; height:27px;"><a href="home.html"><font color="#B40404"size="4" face="Times New Roman"><u>Home</u></font></a></div>
+<div id="Register" style="position:absolute; overflow:hidden; left:38px; top:275px; width:130px; height:27px;"><a href="registration.html"><font color="#FE2E2E"size="4" face="Times New Roman"><u>Register</u></font></a></div>
+<div id="Search" style="position:absolute; overflow:hidden; left:38px; top:350px; width:130px; height:27px;"><a href="donor_search.html"><font color="#DF3A01"size="4" face="Times New Roman"><u>Search</u></font></a></div>
+<div id="Contact us" style="position:absolute; overflow:hidden; left:38px; top:425px; width:130px; height:27px;"><a href="contact.html"><font color="#FE642E"size="4" face="Times New Roman"><u>Contact us</u></font></a></div>
+<div id="Tearms and Conditions" style="position:absolute; overflow:hidden; left:38px; top:500px; width:180px; height:47px;"><a href="conditions.html"><font color="#FF8000"size="4" face="Times New Roman"><u>Terms and conditions</u></font></a></div>
+<div id="rectangle" style="position:absolute; left:230px; top:190px;"><img src="images/image6.gif" width="300" height="400"></div>
+<div id="search text-1" style="position:absolute; overflow:hidden; left:300px; top:212px; ><font color="red" face="Times New Roman" size="6"><h3><b><u>Find a Donor</u></b></h3></font></div>
+
+
+<form name="form" method="get" action="search.jsp">
+<div id="search text-2" style="position:absolute; overflow:hidden; left:270px; top:290px;><font face="Times New Roman">State:	</font>
+<select name="combo1" onchange="change(this);">
+<option value="0">select state</option>
+<option value="1">Andhra Pradesh</option>
+<option value="3">Kerala</option>
+<option value="2">Tamil Nadu</option>
+<option value="4">GAO</option>
+<option value="5">GUJARAT</option>
+<option value="6">DELHI</option>
+<option value="7">PANJAB</option>
+<option value="8">UTTAR PRADESH</option>
+</select>
+<br />
+
+</div>
+
+<div id="search text-3" style="position:absolute; overflow:hidden; left:270px; top:350px;><font face="Times New Roman">
+District:	</font><select name="combo2">
+<option value="">select district</option>
+</select>
+</div>
+<div style="position:absolute; overflow:hidden; left:270px; top:410px;><font face="Times New Roman">Area:	</font>
+<INPUT TYPE="TEXT" NAME="area"></div>
+<div id="search text-4" style="position:absolute; overflow:hidden; left:270px; top:470px;><font face="Times New Roman">Blood Group:	</font>
+<select name="d_blood">
+<option value="">select group</option>
+<option value="O+">O+</option>
+<option value="O-">O-</option>
+<option value="A+">A+</option>
+<option value="A-">A-</option>
+<option value="B+">B+</option>
+<option value="B-">B-</option>
+<option value="AB+">AB+</option>
+<option value="AB-">AB-</option>
+</select></div>
+<INPUT style="position:absolute; overflow:hidden; left:300px; top:540px;" TYPE="submit" NAME="search" value="quick search">
+</form>
+</body>
+</html>

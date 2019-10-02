@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>donor registration page</title>
+<div id="image1" style="position:absolute;top:0px;"><img src="images/image1.jpg" alt="line image" width="1007" height="100"></div>
+<div id="image2" style="position:absolute; left:40px; top:0px; width:222px; height:155px;"><img src="images/image2.jpg"border=0 width=222 height=155></div>
+<div id="image3" style="position:absolute; left:184px; top:10px; width:74px; height:84px;"><img src="images/image3.jpg"border=0 width=74 height=84></div>
+
+<div id="Title text" style="position:absolute; left:284px; top:6px; width:294px; height:84px;"><font color="black" face="Times New Roman" SIZE="6"><u><b>Online Blood Donor Database System</b></u></font></div>
+<div id="image4" style="position:absolute; left:894px; top:8px; width:125px; height:152px;"><img src="images/image4.gif"border=0 width=155 height=152></div>
+<div id="image5" style="position:absolute; left:794px; top:3px; width:130px; height:27px;"><a href="donation.htm"><img src="images/image5.gif"border=0 width=130 height=27></a></div>
+<div id="donor" style="position:absolute; overflow:hidden; left:250px; top:100px; width:350px; height:350px;"><img src="images/image7.gif"width=200 height=200></div>
+<div id="Home" style="position:absolute; overflow:hidden; left:38px; top:200px; width:130px; height:27px;"><a href="home.html"><font color="#B40404"size="4" face="Times New Roman"><u>Home</u></font></a></div>
+<div id="Register" style="position:absolute; overflow:hidden; left:38px; top:275px; width:130px; height:27px;"><a href="donor_registration.html"><font color="#FE2E2E"size="4" face="Times New Roman"><u>Register</u></font></a></div>
+<div id="Search" style="position:absolute; overflow:hidden; left:38px; top:350px; width:130px; height:27px;"><a href="donor_search.html"><font color="#DF3A01"size="4" face="Times New Roman"><u>Search</u></font></a></div>
+<div id="Contact us" style="position:absolute; overflow:hidden; left:38px; top:425px; width:130px; height:27px;"><a href="contact.html"><font color="#FE642E"size="4" face="Times New Roman"><u>Contact us</u></font></a></div>
+<div id="Tearms and Conditions" style="position:absolute; overflow:hidden; left:38px; top:500px; width:180px; height:47px;"><a href="conditions.html"><font color="#FF8000"size="4" face="Times New Roman"><u>Terms and conditions</u></font></a></div>
+<div id="search text-1" style="position:absolute; overflow:hidden; left:460px; top:150px; ><font color="red" face="Times New Roman" size="6"><h1><b><u>Donor Registarion Form</u></b></h1></font></div>
+
+<script language="javascript">
+
+function validate(){
+var name=document.form.r_name.value;
+var blood=document.form.r_blood.value;
+var sex=document.form.r_sex.value;
+var age=document.form.r_age.value;
+var weight=document.form.r_weight.value;
+var phone=document.form.r_fone.value;
+var user=document.form.r_username.value;
+var pswd=document.form.r_password.value;
+var cp=document.form.r_cpassword.value;
+var area=document.form.r_area.value;
+var state=document.form.combo1.value;
+var dis=document.form.combo2.value;
+if(name==""){
+ alert("name should not be null!");
+  return false;
+}
+if(blood==""){
+ alert("Enter u r blood group!");
+  return false;
+}
+if(sex==""){
+ alert("Enter u r gender !");
+  return false;
+}
+if(age==""){
+ alert("Enter u r age!");
+  return false;
+}
+if(weight==""){
+ alert("Enter u r weight!");
+  return false;
+}
+if(phone==""){
+ alert("Enter u r mobile number !");
+  return false;
+}
+if(user==""){
+ alert("Enter u r username!");
+  return false;
+}
+if(pswd==""){
+ alert("Enter password !");
+  return false;
+}
+if(cp==""){
+ alert("conform u r password !");
+  return false;
+}
+if(area==""){
+ alert("Enter u r area!");
+  return false;
+}
+if(state==""){
+ alert("Enter u r state!");
+  return false;
+}
+if(dis==""){
+ alert("Enter u r district!");
+  return false;
+}
+return true;
+}
+</script>
+
+</head>
+<body>
+<form name="form" method="post" action="donor_registration.jsp" onsubmit="javascript:return validate();">
+<table  style="position:absolute; overflow:hidden; left:270px; top:280px;" align="center" border="0" cellpadding="8" width="60%">
+<tr> 
+<th><font face="Times New Roman">Name:</font><input type="text" name="r_name"></th>
+<th><font face="Times New Roman">User Name:</font><input type="text" name="r_username"></th>
+</tr>
+<tr>
+<th><font face="Times New Roman">Blood Group:</font>
+<select name="r_blood">
+<option value="select group">select group</option>
+<option value="O+">O+</option>
+<option value="O-">O-</option>
+<option value="A+">A+</option>
+<option value="A-">A-</option>
+<option value="B+">B+</option>
+<option value="B-">B-</option>
+<option value="AB+">AB+</option>
+<option value="AB-">AB-</option>
+</select></th>
+<th><font face="Times New Roman">Password:</font><input type="password" name="r_password"></th>
+</tr>
+<tr>
+<th><font face="Times New Roman">Gender:</font>
+<select name="r_sex">
+<option value="Select Gender">select gender</option>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+<option value="Others">Others</option>
+</select></th>
+ <th><font face="Times New Roman">conform Password:</font><input type="password" name="r_cpassword"></th>
+</tr>
+ <tr>
+ <th><font face="Times New Roman">Age:</font><input type="text" name="r_age"></th>
+<th><font face="Times New Roman">State:</font><select name="combo1">
+<option value="0">select state</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Kerala">Kerala</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="GAO">GAO</option>
+<option value="GUJARAT">GUJARAT</option>
+<option value="DELHI">DELHI</option>
+<option value="PANJAB">PANJAB</option>
+<option value="UTTAR PRADESH">UTTAR PRADESH</option>
+</select>
+ </tr>
+ <tr>
+ <th><font face="Times New Roman">Weight:</font><input type="text" name="r_weight"></th>
+ <th><font face="Times New Roman">District:</font><input type="text" name="dis">
+</th>
+ </tr>
+ <tr>
+ <th><font face="Times New Roman">Phone no:</font><input type="text" name="r_fone"></th>
+ <th><font face="Times New Roman">Area:</font><input type="text" name="r_area"></th>
+ </tr>
+ <tr align="middle">
+ <th COLSPAN="2" align="center">
+ <input type="submit" name="r_submit" value="submit">
+ <input type="reset" value="reset"></th>
+ </tr>
+</TABLE>
+</form>
+</body>
+</html>

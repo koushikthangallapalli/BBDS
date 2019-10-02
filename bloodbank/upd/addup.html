@@ -1,0 +1,53 @@
+<hrml>
+<head>
+<script language="javascript">
+var arr = new Array();
+arr[0] = new Array("           -select-                 ");
+arr[1] = new Array("ADILABAD","CHITTOOR","KARIMNAGAR","hYDERABAD","KHAMMAM","VIJAYAWADA","VIZAG","WARANGAL");
+arr[2] = new Array("COIMBATHURE","ERODE","KANCHIPURAM","SRIRANGAM","TANJAVUR","TIRUCHIRAPALLI");
+arr[3] = new Array("ALLAPUZHA","KANNUR","KOLLAM","KOZHIKODE","MALLAPURAM","THIRUVANANTHAPURAM");
+arr[4] = new Array("MARGAO","PANAJI");
+arr[5] = new Array("AMRELI","GANDHI NAGAR","JUNAGADH","RAJKOT","SURENDRA NAGAR");
+arr[6] = new Array("DELHI");
+arr[7] = new Array("BATHINDA","CHANDIGARH","FARIDKOD");
+arr[8] = new Array("AGRA","ALLAHABAD","KANPUR","LUCKNOW");
+
+function change(combo1)
+{
+var comboValue = combo1.value;
+document.forms["form"].elements["combo2"].options.length=0;
+for (var i=0;i<arr[comboValue].length;i++)
+{
+var option = document.createElement("option");
+option.setAttribute('value',i+1);
+option.innerHTML = arr[comboValue][i];
+document.forms["form"].elements["combo2"].appendChild(option);
+}
+}
+</script>
+</head>
+<body>
+<form name="form" method="post" action="addupdate.jsp" >
+<table  style="position:absolute; overflow:hidden; left:270px; top:280px;" align="center" border="0" cellpadding="8" width="60%">
+ <tr>
+<th><font face="Times New Roman">State:</font><select name="combo1" onchange="change(this);">
+<option value="0">select state</option>
+<option value="1">Andhra Pradesh</option>
+<option value="3">Kerala</option>
+<option value="2">Tamil Nadu</option>
+<option value="4">GAO</option>
+<option value="5">GUJARAT</option>
+<option value="6">DELHI</option>
+<option value="7">PANJAB</option>
+<option value="8">UTTAR PRADESH</option>
+</select></th>
+<th><font face="Times New Roman">
+District:	</font><select name="combo2">
+<option value="">select district</option>
+</select>
+</th>
+<th><font face="Times New Roman">Area:</font><input type="text" name="r_area"></th>
+ </TABLE>
+</form>
+</body>
+</html>

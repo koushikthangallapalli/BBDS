@@ -1,0 +1,7 @@
+<hrml>
+<body>
+<form name="form" method="post" action="addupdate.jsp" >
+<th><font face="Times New Roman">Area:</font><input type="text" name="area"></th>
+ </form>
+</body>
+</html>
